@@ -26,5 +26,5 @@ Como rodar o projeto? <br>
   - http://localhost:8000/api/departamentos/
 
 8. Consultar todos os colaboradores de um departamento:  <br>
-  - http://localhost:8000/api/departamento/<id_departamento>/
+  - http://localhost:8000/api/departamento/<id_departamento>/  <br>
     Ex: http://localhost:8000/api/departamento/1/
