@@ -37,3 +37,10 @@ class DepartamentoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Departamento
         fields=('id','departamento','colaboradores')
+
+
+class DepartamentosSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Departamento
+        fields=('departamento',)

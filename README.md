@@ -1,44 +1,30 @@
 # ACMEVita
 
-Projeto de modelagem de dados e criação de uma API utilizando Python e Flask.
+Como rodar o projeto? <br>
 
-**Este projeto é parte do processo de seleção de desenvolvedor backend da [Telavita](https://telavita.com.br).**
+1. Clone esse repositório: <br>
+  - git clone https://github.com/crgross10/projeto-vaga-backend-master.git <br>
 
-## Sobre o projeto
+2. Crie um virtualenv com Python 3: <br>
+  - pip3 install virtualenvwrapper  (OBS: WINDOWS 10 ---> virtualenvwrapper-win ) <br>
+  - mkvirtualenv <nome_para_virtual_env> <br>
 
-A ACMEVita está expandindo seus negócios e precisa de um sistema para gerenciar seus departamentos, colaboradores e dependentes.
+3. Ative o virtualenv: <br>
+  - workorn  <nome_da_virtual_env_criada_passo_anterior> <br>
 
-O seu único desenvolvedor backend está de ferias, você foi recrutado para finalizar este projeto, boa sorte!
+4. Instale as dependências: <br>
+  - pip install -r requirements.txt <br>
 
-### Requisitos
+5. Rode as migrações: <br>
+  - python manage.py makemigrations <br>
+  - python manage.py migrate <br>
 
-#### Como um Usuário da API eu gostaria de consultar todos os departamentos para visualizar a organização da ACMEVita.
+6. Swagger: <br>
+  - http://localhost:8000/
 
-* Cada departamento deve possuir um *nome do departamento*.
-* A API deve responder com uma listagem de departamentos no formato JSON informando o *nome do departamento* de cada departamento.
+7. Listagem de departamentos: <br>   
+  - http://localhost:8000/api/departamentos/
 
-#### Como um Usuário da API eu gostaria de consultar todos os colaboradores de um departamento para visualizar a organização da ACMEVita.
-
-* Cada colaborador deve possuir um *nome completo*.
-* Cada colaborador deve pertencer a *um* departamento.
-* Cada colaborador pode possuir *nenhum, um ou mais* dependententes.
-* A API deve responder com uma listagem de colaboradores do departamento no formato JSON informando o *nome completo* de cada colaborador e a respectiva flag booleana `have_dependents` caso o colaborador possua *um ou mais dependentes*.
-
-### Diferenciais
-
-* Testes unitários
-* Referência (Swagger ou similar)
-* Documentação e instruções de configuração
-* Separação das camadas de responsabilidade (modelagem de dados, serialização, lógica, etc)
-
-### Instruções
-
-1. Faça um _fork_ ou download deste projeto.
-2. Trabalhe localmente no seu projeto, faça até o ponto que conseguir.
-3. Você está livre para organizar a estrutura do projeto como preferir.
-4. Você deve utilizar o Flask para criar os endpoints da API.
-4. Você pode utilizar a ORM de sua preferência para modelagem de dados.
-5. Suba o seu projeto para o GitLab, GitHub ou similar.
-6. Nos envie o link para o seu projeto, **mesmo que não esteja finalizado!**
-
-**Qualquer dúvida, entre em contato com [Rafael](mailto:rc@telavita.com.br)!**
+8. Consultar todos os colaboradores de um departamento:  <br>
+  - http://localhost:8000/api/departamento/<id_departamento>/
+    Ex: http://localhost:8000/api/departamento/1/

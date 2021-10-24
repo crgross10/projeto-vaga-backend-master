@@ -9,7 +9,8 @@ from .models import (
 from .serializers import (
         DepartamentoSerializer,
         ColaboradorSerializer,
-        DependenteSerializer)
+        DependenteSerializer,
+        DepartamentosSerializer)
 
 
 class DepartamentoViewSet(viewsets.ModelViewSet):
@@ -23,3 +24,8 @@ class ColaboradorViewSet(viewsets.ModelViewSet):
 class DependenteViewSet(viewsets.ModelViewSet):
     queryset = Dependente.objects.all()
     serializer_class =  DependenteSerializer
+
+
+class DepartamentosViewSet(viewsets.ModelViewSet):
+    queryset = Departamento.objects.all()
+    serializer_class =  DepartamentosSerializer
